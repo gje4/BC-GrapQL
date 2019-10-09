@@ -1,5 +1,5 @@
 {
-  "/Users/george.fitzgibbons/dev/nextJS/finished-application/frontend/noop": [
+  "./noop": [
     {
       "id": "./node_modules/next/dist/client/noop.js",
       "name": "./node_modules/next/dist/client/noop.js",

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Mutation } from "react-apollo";
 import NavStyles from "./styles/NavStyles";
 
 const Nav = () => (

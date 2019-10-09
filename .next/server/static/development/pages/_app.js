@@ -276,34 +276,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-apollo */ "react-apollo");
-/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
+/* harmony import */ var _styles_NavStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/NavStyles */ "./components/styles/NavStyles.js");
 var _jsxFileName = "/Users/george.fitzgibbons/dev/nextJS/finished-application/frontend/components/Nav.js";
 
 
 
 
-
 var Nav = function Nav() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_2__["default"], {
     "data-test": "nav",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/items",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: this
   }, "Shop")));
@@ -494,12 +491,11 @@ function createClient(_ref) {
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_1___default.a({
     uri: "https://headless.mybigcommerce.com/graphql",
     request: function request(operation) {
-      operation.setContext(_objectSpread({}, headers, {
-        "Content-Type": "application/json",
-        "X-Auth-Client": "rstcpw0dk6udvc45o6sl0skvr5pexss",
-        "X-Auth-Token": "eo8zlp9nzaw8j12tlt4xknfj77byft1",
-        Authorization: "Bearer simple_jkwmtff63ap318zciryjbfwanagbedsze61f2hyvnq11fccdpjllgcm5xqpl7y28"
-      }));
+      operation.setContext({
+        headers: _objectSpread({}, headers, {
+          Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJlYXQiOjIwMDAwMDAwMDAsInN1Yl90eXBlIjoyLCJ0b2tlbl90eXBlIjoxLCJjb3JzIjpbImh0dHA6Ly9sb2NhbGhvc3Q6Nzc3NyJdLCJjaWQiOjEsImlhdCI6MTU3MDY0Njg4NSwic3ViIjoicDY4aTVyMnRxM2hyNHAwMmhva21ic2JzdjJ6ZnJmNyIsInNpZCI6MTAwMDcyMzA3NywiaXNzIjoiQkMifQ.SeDB_o0Nl2AtF-tiW0j19Jf8qPyALQYGWkMD78lQjUXAtci2htQOrMncBRtdSyUzGojuZgXmQDvllq4pigsgzg"
+        })
+      });
     },
     // local data
     clientState: {

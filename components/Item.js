@@ -13,28 +13,31 @@ export default class Item extends Component {
 
   render() {
     const { item } = this.props;
+    console.log("item", item.node);
     return (
       <ItemStyles>
-        {item.image && <img src={item.image} alt={item.title} />}
+        {item.node.defaultImage.url && (
+          <img src={item.node.defaultImage.url} alt={item.node.name} />
+        )}
 
         <Title>
           <Link
             href={{
               pathname: "/item",
-              query: { id: item.id }
+              query: { id: item.node.entityId }
             }}
           >
             <a>{item.title}</a>
           </Link>
         </Title>
-        <PriceTag>{formatMoney(item.price)}</PriceTag>
+        <PriceTag>{formatMoney(item.node.prices.price.value)}</PriceTag>
         <p>{item.description}</p>
 
         <div className="buttonList">
           <Link
             href={{
               pathname: "update",
-              query: { id: item.id }
+              query: { id: item.node.entityId }
             }}
           >
             <a>Edit ✏️</a>

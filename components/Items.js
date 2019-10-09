@@ -49,10 +49,12 @@ class Items extends Component {
           {({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error: {error.message}</p>;
+            console.log("test", data.site.products.edges);
+            // return <a> TEST </a>;
             return (
               <ItemsList>
-                {data.items.map(item => (
-                  <Item item={item} key={item.id} />
+                {data.site.products.edges.map(item => (
+                  <Item item={item} key={item.entityId} />
                 ))}
               </ItemsList>
             );
