@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Item = styled.div`
   background: white;
@@ -20,7 +20,7 @@ const Item = styled.div`
     padding: 0 3rem;
     font-size: 1.5rem;
   }
-  .buttonList {
+  .buttonStyles {
     display: grid;
     width: 100%;
     border-top: 1px solid ${props => props.theme.lightgrey};
@@ -30,7 +30,7 @@ const Item = styled.div`
     & > * {
       background: white;
       border: 0;
-      font-family: 'radnika_next';
+      font-family: "radnika_next";
       font-size: 1rem;
       padding: 1rem;
     }
