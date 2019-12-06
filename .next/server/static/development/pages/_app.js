@@ -108,31 +108,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! nprogress */ "nprogress");
-/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Nav */ "./components/Nav.js");
 var _jsxFileName = "/Users/george.fitzgibbons/dev/BC-GrapQL/components/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-
-
-next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeStart = () => {
-  nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.start();
-};
-
-next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeComplete = () => {
-  nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.done();
-};
-
-next_router__WEBPACK_IMPORTED_MODULE_4___default.a.onRouteChangeError = () => {
-  nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.done();
-};
 
 const Logo = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h1.withConfig({
   displayName: "Header__Logo",
@@ -146,39 +130,39 @@ const StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.he
 const Header = () => __jsx(StyledHeader, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 56
+    lineNumber: 45
   },
   __self: undefined
 }, __jsx("div", {
   className: "bar",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 57
+    lineNumber: 46
   },
   __self: undefined
 }, __jsx(Logo, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 58
+    lineNumber: 47
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 59
+    lineNumber: 48
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60
+    lineNumber: 49
   },
   __self: undefined
-}, "BigCommerce"))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}, "BigCommerce"))), __jsx(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 63
+    lineNumber: 52
   },
   __self: undefined
 })));
@@ -478,7 +462,7 @@ function createClient({
     request: operation => {
       operation.setContext({
         headers: _objectSpread({}, headers, {
-          Authorization:  true ? `Bearer ${process.env.BC_TOKEN}` : undefined
+          Authorization: (process && process.env && "development" || "development") === "development" ? `Bearer ${process && process.env && process.env.BC_TOKEN || "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJlYXQiOjIwMDAwMDAwMDAsInN1Yl90eXBlIjoyLCJ0b2tlbl90eXBlIjoxLCJjb3JzIjpbImh0dHA6Ly9sb2NhbGhvc3Q6Nzc3NyJdLCJjaWQiOjEsImlhdCI6MTU3MDk5MDA0NCwic3ViIjoiMW10NTk4MTBkb2Flb3Fyb29zeWI2M3NuNTF1NWEyeiIsInNpZCI6MTAwMDc5NjY1NywiaXNzIjoiQkMifQ.sp9BZZXs6H3cA2UVSbDa9sbwZC1xu7FCXMpwQKV3adRqlR11mubuJ8iuNY8xd0flrFHPRwIbfLe286CuNTx-LQ"}` : `Bearer ${process && process.env && process.env.BC_TOKEN || "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJlYXQiOjIwMDAwMDAwMDAsInN1Yl90eXBlIjoyLCJ0b2tlbl90eXBlIjoxLCJjb3JzIjpbImh0dHA6Ly9sb2NhbGhvc3Q6Nzc3NyJdLCJjaWQiOjEsImlhdCI6MTU3MDk5MDA0NCwic3ViIjoiMW10NTk4MTBkb2Flb3Fyb29zeWI2M3NuNTF1NWEyeiIsInNpZCI6MTAwMDc5NjY1NywiaXNzIjoiQkMifQ.sp9BZZXs6H3cA2UVSbDa9sbwZC1xu7FCXMpwQKV3adRqlR11mubuJ8iuNY8xd0flrFHPRwIbfLe286CuNTx-LQ"}`
         })
       });
     },
@@ -6526,17 +6510,6 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("next/router");
-
-/***/ }),
-
-/***/ "nprogress":
-/*!****************************!*\
-  !*** external "nprogress" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("nprogress");
 
 /***/ }),
 
