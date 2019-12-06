@@ -1,2 +1,10 @@
+# dependencies
 node_modules
+
+# production
+.next
+
+# misc
 .env
+.DS_Store
+*.log
