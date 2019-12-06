@@ -3,7 +3,6 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import styled from "styled-components";
 import Item from "./Item";
-import { perPage } from "../config";
 
 const ALL_ITEMS_QUERY = gql`
   query getProducts {
