@@ -40,7 +40,6 @@ Create a `.env` file in the root directory and add the following with your secre
 
 ```dosini
 BC_TOKEN
-BC_KEY
 ```
 
 Now you're ready to go!
