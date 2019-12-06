@@ -1,18 +1,24 @@
 ## Why?
-Boilerplate commerce store that can be used with BigCommerce GraphQl API, to quickly make a shopping experance.
+
+Boilerplate commerce store that can be used with BigCommerce GraphQl API, to quickly make a shopping experience.
 
 ## What does this application do?
+
 The application is fetching products from a demo store and has complete checkout flow using BigCommerce checkout SDK.
 
 ## Contributing
+
 George FitzGibbons, Patrick Williams, Ashley McKemie
 
 ### Running the project
+
 To get started you will need to have a BigCommerce Store.
 
 You will need to have +v10 node.
 
-Once you have a store generate an GraphQl API key with full permissions
+You will need to generate API keys for the checkout SDK, these keys need to have full permissions
+
+You will need to generate an GraphQl API key as well to fetch products
 https://developer.bigcommerce.com/api-docs/storefront/graphql/graphql-storefront-api-overview
 
 ```
@@ -32,7 +38,7 @@ POST https://api.bigcommerce.com/stores/{store_hash}/v3/storefront/api-token
   "expires_at": 1602288000,   // double utc unix timestamp (required)
   "allowed_cors_origins": [   // array (accepts 1 origin currently)
     "https://example.com"
-  ]  
+  ]
 }
 ```
 
@@ -40,6 +46,8 @@ Create a `.env` file in the root directory and add the following with your secre
 
 ```dosini
 BC_TOKEN
+BC_STOREFRONT_TOKEN
+BC_STOREFRONT_CLIENT
 ```
 
 Now you're ready to go!
@@ -49,6 +57,7 @@ npm install
 ```
 
 To run locally
+
 ```bash
 npm run dev
 ```
